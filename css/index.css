@@ -14,18 +14,27 @@ h1 {
     font-weight: bold;
 }
 
-div.box1 {
-    height: 100px;
-    width: 100px;
-    background-color: darkcyan;
+.outer{
+    width: 150px;
+    height: 150px;
+    display: flex;
+    flex-wrap: wrap;
 }
-div.box2 {
-    height: 100px;
-    width: 100px;
-    background-color: rgb(24, 218, 24);
+.child-1,.child-2,.child-3,.child-4{
+    width: calc(50% - 6px);
+    height: calc(50% - 6px);
+    margin: 2px;
+    background-color: chartreuse;
 }
-div.box3 {
-    height: 100px;
-    width: 100px;
-    background-color: rgb(243, 239, 14);
+.child-1{
+    border-radius: 50% 50% 0 50%;
+}
+.child-2{
+    border-radius: 50% 50% 50% 0;
+}
+.child-3{
+    border-radius: 50% 0 50% 50%;
+}
+.child-4{
+    border-radius: 0 50% 50% 50%;
 }
