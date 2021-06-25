@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>関数とクラス</title>
+    </head>
+    <body>
+        <script>
+         'use strict';
+        
+          //アロー関数
+          //()=>{}
+
+        //  const addTwoNum = (x,y)=>{
+        //      return x+y;
+        //  }
+        //  console.log (addTwoNum(3,4));
+
+        //クラスとは
+        class Cluculator {
+            constructor (x,y){
+                this.x=x;
+                this.y=y;
+            }
+            addTwoNum(){
+                return this.x + this.y;
+            }
+        }
+
+        const Calc = new Cluculator(3,4);//インスタンス生成
+        console.log (Calc.addTwoNum());
+        </script>
+    </body>
+</html>
