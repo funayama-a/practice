@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="jp">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>自己紹介サイト</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+        <style type="text/css">
+        html {
+             scroll-behavior: smooth;
+        }
+        body{
+            padding: 0;
+            margin: 0;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        #main{
+            background-color: #f7f7f7;
+            text-align: center;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 8px;
+            z-index: 2;
+            overflow: auto;
+            box-sizing: border-box;
+            transition: .4s;
+        }
+        ul{
+            list-style: none;
+        }
+        #menu{
+            background-color: hsl(180, 13%, 82%);
+            color: #f8f7f7;
+            position: fixed;
+            top: 0px;
+            right: 0px;
+            padding: 8px;
+            width: 180px;
+            min-height: 100%;
+            z-index: 1;
+            box-sizing: border-box;
+        }
+        #open,#close{
+            float: right;
+            cursor: pointer;
+        }
+        #main.menu-open{
+            left: -180px;
+        }
+        p,h1{
+            padding: 10px;
+            border: none;
+            margin: 10px;
+        }
+        .image-vw{
+            width: 100vw;
+        }
+        #plofile{
+           background-color: rgba(231, 231, 230, 0.856);
+           width: 100%;
+           height: 70%;
+        }
+        #History{
+            background-color: rgba(169, 207, 203, 0.89);
+            width: 100%;
+            height: 60%;
+        }
+        #Hobby{
+            background-color: rgba(250, 239, 189, 0.863);
+            width: 100%;
+            height: 65%;
+        }
+       </style>
+    </head>
+    <body>
+        <div id="menu">
+            <i class="fa fa-times" id="close"></i>
+            <ul>
+                <li><a href="#plofile">Plofile</a></li>
+                <li><a href="#History">History</a></li>
+                <li><a href="#Hobby">Hobby</a></li>
+                <li><a href="#Mail">Mail</a></li>
+            </ul>
+        </div>
+        <div id="main">
+            <i class="fa fa-bars" id="open"></i>
+            <img src="img/海と砂浜4.jpg" alt="海と砂浜" class="image-vw">
+            <div id="plofile">
+            <P> </P>
+            <h1>Plofile</h1>
+            <p>1998年5月18日うまれ。</p>
+            <p>秋田県出身。海が好き。</p>
+            <p>亀のような歩みですが、経験を積み、立派なシステムエンジニアになることが目標です。</p> 
+            <p>オリジナルのゲームを造ることが夢です。</p>
+            </div>
+            <div id="History">
+            <p> </p>
+            <h1>History</h1>
+            <p>大学では、近代文学を専攻し、芥川龍之介の作品についての卒業論文を書きました。</p>
+            <p>また、教育やジェンダー研究に興味を持ち、高等学校教諭一種免許状と</p>
+            <p>ジェンダープログラム修了証を取得しました。</p>
+            </div>
+            <div id="Hobby">
+            <p> </p>
+            <h1>Hobby</h1>
+            <p>趣味は絵を描くこと、映画を観ること、小説を読むことです。</p>
+            <p>好きな映画は、ギレルモ・デル・トロ監督の『パンズ・ラビリンス』</p>
+            <p>好きな小説は、トマス・ハリスの『レッド・ドラゴン』</p>
+            </div>
+            <div id="Mail">
+            <h3>Mail : ayaka.funayama@force-corp.co.jp</h3>
+            </div>
+        </div>
+        <script>
+           'use strict';
+
+           const open = document.getElementById('open');
+           const main = document.getElementById('main');
+           const close = document.getElementById('close');
+
+           open.addEventListener('click',() => {
+                   main.className = 'menu-open';
+           });
+           close.addEventListener('click',() => {
+               main.className = ' '
+           });
+        </script>
+    </body>
+</html>
